@@ -1,4 +1,4 @@
-//example
+//example on function
 
 function getMyName() {
   return "sai prasad";
@@ -6,4 +6,5 @@ function getMyName() {
 let name = getMyName();
 
 console.log("My name is :" + name);
+
 
