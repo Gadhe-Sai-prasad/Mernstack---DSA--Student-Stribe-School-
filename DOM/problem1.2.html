@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapido App</title>
+</head>
+<body>
+    <h1 id="main-title" >Rapido Bike Booking</h1>
+    <input id="location-box" type="text" placeholder="Enter your location">
+    <button id="search-btn">Find Bikes</button>
+    <div id="bike-results">
+        <!--Bikes will appear hee-->
+    </div>
+    <script>
+        console.log("Rapido app starting!");
+
+        //TODO Find the title and log it 
+        let title = document.getElementById("main-title");
+        console.log("Title found:",title)
+
+        //TODO Find the input box
+        let locationBox= document.getElementById("location-box");
+        console.log("Input box found:",locationBox);
+
+        //TODO Find the search button
+        let searchButton = document.getElementById("search-btn");
+        console.log("search button found:",searchButton);
+
+        //TODO Find the results area 
+        let resultsArea = document.getElementById("bike-results");
+        console.log("results are found:",resultsArea);
+
+        console.log("All elements found!");
+
+        //Add this to your script tag
+        console.log("Changing text on the page");
+
+        //TODO: change the main title 
+        let mainTitle = document.getElementById("main-title");
+        mainTitle.textContent = "Find Bikes Near you!";
+        console.log(mainTitle);
+
+        //TODO: Change the button text 
+        let searchBtn = document.getElementById("search-btn");
+        searchBtn.textContent= "<p>Search Bikes</p>";
+        console.log(searchBtn);
+
+        //TODO: Add some text to results area
+        let bikeResults = document.getElementById("bike-results");
+        bikeResults.innerHTML = "<p> Click search to find bikes!</p>"
+        console.log(bikeResults);
+
+        //TODO: 
+    </script>
+</body>
+</html>
