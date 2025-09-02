@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rapido Bike Booking</title>
+  </head>
+  <body>
+    <h1 id="main-title">Rapido booking</h1>
+    <input id="location-box" type="text" placeholder="Enter your location" />
+    <button id="search-btn">Find Bikes</button>
+    <div id=" bike-results">
+      <!--Bikes will appear here-->
+    </div>
+
+    <script>
+      console.log("rapido app starting!");
+
+      //TODO: Find the title and log it
+      let title = document.getElementById("main-title");
+      console.log("Title found:", title);
+
+      //TODO: Find the input box
+      let locationBox = document.getElementById("location-box");
+      console.log("input box found", locationBox);
+
+      //TODO: Find the search button
+
+      let searchButton = document.getElementById("search-btn");
+      console.log("search button found:", searchButton);
+
+      //TODO: Find the results area
+      let resultsArea = document.getElementById("bike-results");
+
+      console.log("Results area found:", resultsArea);
+
+      console.log("all elements found!");
+
+      //Add this to your script tag
+      console.log("Changing tesxt on the page");
+
+      //TODO: Change the main title
+      let mainTitle = document.getElementById("main-title");
+      mainTitle.textConten = "Find Bikes near you!";
+      console.log("new text ", mainTitle);
+
+      //TODO change the button text
+      let searchBtn = document.getElementById("search-btn");
+      searchBtn.textContent = "search Bikes";
+      console.log(searchBtn);
+
+      let bikeResults = document.getElementById(" bike-results");
+      bikeResults.innerHTML =  "<h1>hii</h1>";
+      console.log(bikeResults);
+
+      //   //TODO Add some text to results area
+      //   let bikeResults = document.getElementById("bike-results");
+      //   bikeResults.innerHTML = "<p> click search to find bikes! </p>";
+
+      // console.log(bikeResults);
+      console.log("setting up button click");
+
+        let searchButtons = document.getElementById("search-btn");
+        let locationInput = document.getElementById("location-box");
+        let resultDiv = document.getElementById("bike-result");
+        //TODO: make button do something when clicked
+
+        searchButtons.addEventListener("click",function() {
+          console.log("button was clicked");
+
+          //get what user typed
+          let userLocation = locationInput.value;
+          console.log("user typed:",userLocation);
+
+          //check if user typed anything
+          if(userLocation ==="") {
+              alert("please enter a location first!");
+              return;
+          }
+
+          //show some bikes (fake data for now)
+          resultsDiv.innerHTM = `
+          <h3> bikes near ${userLocation}:</h3>
+          <p> Thunder Bike - batter: 85% - distance :20m</p>
+          <p> star bike - battery : 97%- distance: 200m</p>
+          `
+
+        })
+        console.log("bikes displayed!");
+    </script>
+  </body>
+</html>
